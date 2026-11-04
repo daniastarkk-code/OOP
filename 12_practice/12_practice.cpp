@@ -82,5 +82,5 @@ int main()
 	v.removeFromStart();
     cout << "After delete first element from vector : " << endl;
 	v.PrintVector();
-
+    cout << "end";
 }
