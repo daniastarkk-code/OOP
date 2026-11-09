@@ -86,6 +86,7 @@ public:
 
 int main()
 {
+	cout << "--------------   Student   ----------------" << endl;
 	Student student1;
 	student1.EnterStudent();
 	student1.PrintStudent();
