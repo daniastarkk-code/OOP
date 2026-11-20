@@ -75,20 +75,38 @@ public:
 
 int main()
 {
-	Stack st(15);
-	cout << "Size = " << st.GetCount() << endl;
-	for (int i = 0; i < 7; i++)
+	try
 	{
-		st.Push(rand() % 50);
-	}
+		Stack st(15);
+		cout << "Size = " << st.GetCount() << endl;
+		for (int i = 0; i < 7; i++)
+		{
+			st.Push(rand() % 50);
+		}
 
-	cout << "Size = " << st.GetCount() << endl;
-	st.Print();
-	while (!st.IsEmpty())
-	{
-		cout << "Delete element : " << st.Pop() << endl;
+		cout << "Size = " << st.GetCount() << endl;
 		st.Print();
+		while (!st.IsEmpty())
+		{
+			cout << "Delete element : " << st.Pop() << endl;
+			st.Print();
+		}
+		cout << "Size = " << st.GetCount() << endl;
 	}
-	cout << "Size = " << st.GetCount() << endl;
-
+	catch (overflow_error ex)
+	{
+		cout << ex.what() << endl;
+ 	}
+	catch (underflow_error ex)
+	{
+		cout << ex.what() << endl;
+	}
+	catch (underflow_error ex)
+	{
+		cout << ex.what() << endl;
+	}
+	catch (...)
+	{
+		cout << "Unknown error";
+	}
 }
